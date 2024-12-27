@@ -1,0 +1,461 @@
+/* less than 576px */
+body{
+    overflow-x:hidden;
+}
+/*styles to be applied less than 576*/
+/*navbar*/
+.navbar{
+    background-color: rgb(250, 238, 238);
+    width:100vw;
+    position: sticky;
+}
+.menubar{
+    
+}
+.menubar>li>a{
+    color:red;
+    width:85px;
+    text-align: center;
+    font-weight: 700;
+    transition:all 0.5s linear;
+    
+}
+.menubar>li>a:hover{
+    border:2px solid red;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: red;
+    color:white;
+}
+.mylogo{
+width: 200px;
+}
+.navbar .navbar-toggler-icon{
+    /* color: black; */
+    /* background-color: black; */
+}
+
+
+/*navbar*/
+
+
+/*banner*/
+.snowrap{
+    
+    height: 70vh;
+    width:100%;
+    background-image: url('./christmas/images/slider-01.jpg');
+    background-size: 100% 100%;
+
+    position: relative;
+    overflow:hidden;
+}
+.snow, .snow::before, .snow::after{
+    content:'';
+    position: absolute;
+    top:-500px;
+    left:0;
+    right:0;
+    bottom:0;
+
+    background-image: radial-gradient(5px 10px at 100px 100px,aqua,transparent),
+    radial-gradient(5px 10px at 80px 50px,aqua,transparent),
+    radial-gradient(5px 10px at 160px 150px,aqua,transparent),
+    radial-gradient(5px 10px at 240px 250px,aqua,transparent),
+    radial-gradient(5px 10px at 320px 300px,aqua,transparent),
+    radial-gradient(5px 10px at 400px 350px,aqua,transparent),
+    radial-gradient(5px 10px at 80px 200px,aqua,transparent),
+    radial-gradient(5px 10px at 450px 340px,aqua,transparent),
+    radial-gradient(5px 10px at 450px 450px,aqua,transparent),
+    radial-gradient(5px 10px at 350px 500px,aqua,transparent)
+    ;
+    background-size: 500px 500px;
+    animation-name:snowfall;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.snow::before{
+    margin-left: 100px;
+    opacity: 0.4;
+    filter:blur(2px)
+}
+.snow::after{
+    margin-left: 200px;
+}
+@keyframes snowfall{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(650px);
+    }
+}
+/*banner*/
+/*bestwishes*/
+.bestwishes{
+    margin:20px 0;
+    /* position: relative; */
+}
+.bestwishes h1{
+    text-align: center;
+    color:rgb(193, 38, 38);
+        font-family: "Great Vibes", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 75px;
+}
+.bestwishes .harrywish{
+    margin:40 0 !important;
+}
+.bestwishes .harrywishleft{
+height:500px;
+
+}
+.bestwishes .harrywishright{
+/* background-color: aliceblue; */
+
+    text-align: center;
+}
+
+.bestwishes strong{
+    font-size: 20px;
+    color:rgb(193, 38, 38);
+    margin:20px;
+}
+.bestwishes .johnwish{
+/* margin:40 0 !important; */
+}
+.bestwishes .johnwish .john{
+    /* margin-left: -200px; */
+}
+/* .bestwishes .johnwishleft{
+    height: 500px;
+}
+.bestwishes .johnwishright{
+    height: 500px;
+}
+.johnwish .johnwishleft{
+    margin-left:auto;
+    text-align: center;
+} */
+.johnwish .image{
+/* position:absolute;
+right:60px;
+top:10px;
+height: 400px;
+width:400px; */
+    }
+
+
+.johnwish  strong{
+font-size: 30px;
+}
+/*bestwishes*/
+.bestwishes .readmore{
+    display: block;
+    padding: 15px 40px;
+    margin:0 auto;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: rgb(193, 38, 38);;
+    color:white;
+    border:none;
+
+}
+.johnmax{
+    border:2px solid blue;
+    width:100vh;
+    padding-left: 240px;
+    
+}
+.johnmax strong{
+    font-size: 20px;
+    color:rgb(193, 38, 38);
+}
+/*Best Wishes*/
+/*Best Deals*/
+.bestdeals{
+    
+    height:auto;
+    width:100%;
+    padding: 20px;
+}
+.bestdeals h1{
+    text-align: center;
+    font-family: "Great Vibes",cursive;
+    font-weight: 400;
+    font-style:normal;
+    font-size: 75px;
+    color:rgb(172, 60, 60);
+}
+.bestdeals .bestdealscards{
+    /*background-color: pink;*/
+    width:100%;
+    
+
+    display:grid;
+    grid-template-columns: repeat(1,250px);
+    grid-template-rows: repeat(4,250px);
+    
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    row-gap: 50px;
+}
+.bestdeals .bestdealscards .one{ 
+   /* background-color: aqua;*/
+    height: 100%;
+    width: 100%;
+    background-image: url('./christmas/images/d1.png');
+    
+    background-size: 100% 100%;
+    background-position: center;
+    border:5px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+.bestdeals .bestdealscards .two{
+    height: 100%;
+    width: 100%;
+    background-image: url('./christmas/images/d2.png');
+    
+    background-size: 100% 100%;
+    background-position: center;
+    border:5px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+.bestdeals .bestdealscards .three{
+    height: 100%;
+    width: 100%;
+    background-image: url('./christmas/images/d3.png');
+    
+    background-size: 100% 100%;
+    background-position: center;
+    border:5px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+.bestdeals .bestdealscards .four{
+    height: 100%;
+    width: 100%;
+    background-image: url('./christmas/images/d1.png');
+    
+    background-size: 100% 100%;
+    background-position: center;
+    border:5px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+.bestdeals .bestdealscards .bestdealcard .content{
+    font-family: "Great Vibes",cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 75px;
+    background-color: brown;
+    color:white;
+}
+.bestdeals .bestdealscards  :hover{
+border:5px solid red;
+}
+.bestdeals .bestdealscards .bestdealcard .content h2{
+    font-family: "Great Vibes",cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 10px;
+}
+/*Best Deals*/
+/*Donate*/
+.donate{
+   /* background-color: aqua;*/
+    height:auto;
+    width:100%;
+    margin: 30px 0;
+}
+.donate .donatetitle{
+ 
+    color:red;
+    font-size: 70px;
+    font-family: "Great Vibes",cursive;
+    padding-top: 100px;
+}
+.donate .donatecards{
+   /* border:2px solid;*/
+    height: 95%;
+    width:100%;
+
+    display: grid;
+    grid-template-columns: repeat(1,350px);
+    grid-template-rows: repeat(9,300px);
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+.donate .donatecards .donatecard .content {
+position: absolute;
+background-color: pink;
+bottom:-120%;
+left:0;
+height: 100%;
+width: 100%;
+background-color: rgb(255,0,0,0.5);
+color:aqua;
+transition: all 0.5s ease-in-out;
+}
+.donate .donatecards .donatecard:hover .content{
+    bottom:0%;
+}
+.donate .donatecards .donatecard{
+background-image: url('./christmas/images/d4.png');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-position: center;
+border:5px solid transparent;
+transition: all 0.5s ease-in-out;
+position: relative;
+overflow: hidden;
+}
+/*Donate*/
+/*testimonials*/
+.testimonials{
+    margin:40px 0;
+    width:100%;
+    height: 100vh;
+    /* border: 5px solid green; */
+    background-color: aliceblue;
+    padding: 10px;
+}
+.testimonials h1{
+    font-family: "Great Vibes",cursive;
+    font-size: 55px;
+    color: red;
+    font-weight: 900;
+}
+.testimonials .carousel{
+    /* border: 5px solid orange; */
+    height: 80%;
+    width: 100%;
+}
+.testimonials .carousel .carousel-inner{
+    /* border: 5px solid blue; */
+    height: 100%;
+    width: 100%;
+}
+.testimonials .carousel .carousel-inner .carousel-item{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.testimonials .carousel .carousel-inner .carousel-item img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    position: absolute;
+    left: 40%;
+}
+/*testimonials*/
+/*contact us*/
+.contactus{
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+    width:100%;
+}
+.contactus h1{
+    
+    margin:30px 0;
+    font-family: "Great Vibes",cursive;
+    color:red;
+    font-weight: 600;
+    font-size: 70px;
+    text-align: center;
+    top:-300px;
+
+}
+.left button{
+    background-color: red;
+    color:white;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border:none;
+    margin-left: 30%;
+}
+.right{
+margin-left: 200px;
+}
+.contactus button{
+    border:2px solid red;
+    padding:10px;
+    background-color: red;
+    color:#fff;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px; 
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonials .a{
+    margin-top: 100px;
+    margin-left: 40px;
+}
+.testimonials .b{
+    margin-top: 100px;
+    margin-left: 40px;
+}
+.top{
+
+}
+.right i{
+    border:2px solid red;
+    height:50px;
+    width:50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:50px;
+    background-color: red;
+    color:white;
+    border-radius: 50%;
+    
+}
+.subscribe{
+    width:100%;
+    position: relative;
+    margin-top: 100px;
+    height:80vh;
+    background-color: red;
+}
+.subscribe h1{
+    color:white;
+    font-family: "Great Vibes",cursive;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.subscribe input{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+margin-left: 70px;
+width:80%;
+}
+.subscribe button{
+    margin-top: 20px;
+    background-color: black;
+    color:white;
+    margin-left: 220px;
+    border:none;
+    margin-top:80px;
+    padding:20px;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 25px;
+
+}
